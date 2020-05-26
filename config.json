@@ -1,0 +1,26 @@
+{
+    "app": {
+        "nombre":"Running copy-fullsatack-app",
+        "port": 3003
+    },
+    "database":{
+        "default":"firestore",
+        "mongodb":{
+            "databaseName":"myproject",
+            "url":"mongodb://localhost:27017"
+        },
+        "firebase":{
+            "url": "https://devlearning-2c9c9.firebaseio.com"
+        }
+    },
+    "jwt":{
+        "secreto":"bictia",
+        "expire":60
+    },
+    "login":{
+        "username":"Admin",
+        "password": 123456,
+        "type": "Admin"
+    }
+
+}
