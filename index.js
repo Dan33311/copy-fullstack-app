@@ -3,9 +3,9 @@ const app = express();
 const config = require('./config.json');
 //const config2 = require('./app/utils/config');
 //son equivalentes
-const port = process.env.PORT ? process.env.PORT : config.app.port ? config.app.port : 3456;
+const port = process.env.PORT ? process.env.PORT : config.app.port ? config.app.port : 3003;
 const bind = process.env.BIND ? process.env.BIND : config.app.bind ? config.app.bind : '127.0.0.1' ;
-//const port = process.env.PORT || config.app.port || 3456;
+//const port = process.env.PORT || config.app.port || 3003;
 
 //URL Encode support for POST, PUT methods
 const bodyParser = require('body-parser');
