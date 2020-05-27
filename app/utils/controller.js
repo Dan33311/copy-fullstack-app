@@ -10,7 +10,7 @@ const Controller = function (TABLE) {
 
     //{{SERVER}}/users/ 
     //Lista todos los usuarios
-    router.get('/', function (request, response) {
+    router.get('/list', function (request, response) {
         let validationToken = general.validateLogin(request);
         if (validationToken.auth) {
             model.getAll(TABLE)
