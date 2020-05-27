@@ -47,19 +47,19 @@ const General = function () {
         let model='';
         switch (General.defaultDatabase) {
             case 'mongodb':
-                console.log("entra a mongo");
+                console.log("in a mongo");
                 model = require("../models/mongodb_model")(General.mongoDB.client, General.mongoDB.url);
                 break;
             case 'firestore':
-                console.log("entra a firestore");
+                console.log("an a firestore");
                 model = require('../models/firestore_model')(General.firebase.firestore());
                 break;
             case 'sqlite':
-                console.log("entra a sqlite");
+                console.log("en a sqlite");
                 model = require('../models/sqlite_model')(General.sqlite);
                 break;
             default:
-                console.log("entra a default");
+                console.log("on a default");
                 model = require('../models/firestore_model')(General.firebase.firestore());
                 break;
         }

@@ -1,6 +1,6 @@
 module.exports = {
     app: {
         name : 'Aplicacion backend para badge',
-        port : 3456
+        port : 3003
     }
 }
