@@ -34,6 +34,10 @@ app.use('/badge', badge_controller);
 app.use('/login', loginController);
 app.use('/badge_user', badge_user_controller);
 
+app.use('/', (request, response)=>{
+    response.send('Bienvenido a la API de ' + config.app.name);
+});
+
 app.listen(port, function(){
     console.log('***********************');
     console.log("App: "+config.app.nombre);
