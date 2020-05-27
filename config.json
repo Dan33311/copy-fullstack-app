@@ -1,7 +1,8 @@
 {
     "app": {
-        "nombre":"Running copy-fullsatack-app",
-        "port": 3003
+        "nombre":"copy-fullsatack-app",
+        "port": 3003,
+        "bind": "0.0.0.0"
     },
     "database":{
         "default":"firestore",
@@ -10,7 +11,7 @@
             "url":"mongodb://localhost:27017"
         },
         "firebase":{
-            "url": "https://devlearning-2c9c9.firebaseio.com"
+            "url": "https://copy-fullstack-app.firebaseio.com"
         }
     },
     "jwt":{

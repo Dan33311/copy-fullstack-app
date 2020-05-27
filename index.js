@@ -4,6 +4,7 @@ const config = require('./config.json');
 //const config2 = require('./app/utils/config');
 //son equivalentes
 const port = process.env.PORT ? process.env.PORT : config.app.port ? config.app.port : 3456;
+const bind = process.env.BIND ? process.env.BIND : config.app.bind ? config.app.bind : '127.0.0.1' ;
 //const port = process.env.PORT || config.app.port || 3456;
 
 //URL Encode support for POST, PUT methods
@@ -34,5 +35,9 @@ app.use('/login', loginController);
 app.use('/badge_user', badge_user_controller);
 
 app.listen(port, function(){
-    console.log("Corriendo: "+config.app.nombre);
+    console.log('***********************');
+    console.log("App: "+config.app.nombre);
+    console.log('Running: '+ config.app.bind+':'+config.app.port);
+    console.log('***********************');
 });
+
