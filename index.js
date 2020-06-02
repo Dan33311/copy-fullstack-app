@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const config = require('./config.json');
+const cors = require('cors');
 //const config2 = require('./app/utils/config');
 //son equivalentes
 const port = process.env.PORT ? process.env.PORT : config.app.port ? config.app.port : 3003;
@@ -27,6 +28,7 @@ let badge_user_controller = require('./app/utils/controller')('badge_user');
 let heroController = require('./app/controllers/heroes')('heroes');  // new
 app.use('/heroes', heroController);
 
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
